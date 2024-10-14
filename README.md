@@ -42,7 +42,7 @@ Designing and implementing a URL shortener service involves several key consider
 The following diagram tries to explain the working of the underlying code.
 
  1. Class Diagram
- `![Class Diagram](/img/ClassDiagram.png)`
+ [Class Diagram](/img/ClassDiagram.png)
 
  2. ER Diagram
  `![ER Diagram](/img/ERDiagram.png)`
