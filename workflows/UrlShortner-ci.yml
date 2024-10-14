@@ -1,0 +1,37 @@
+name: James-Cli - Build and Test
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ release ]
+
+# This job runs on a virtual machine hosted by GitHub
+jobs:
+  build:
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps define the actions to run as part of the job
+    steps:
+      # Checks out the repository under $GITHUB_WORKSPACE
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up .NET Core SDK
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0' # Specify the version of .NET you're using, e.g., 7.0.x
+
+      # Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Build the project
+      - name: Build project
+        run: dotnet build
+
+      # Run tests (if any tests are available in your solution)
+      - name: Run tests
+        run: dotnet test ".\Tests\Shortner.Tests\"

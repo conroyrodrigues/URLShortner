@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mssql:
+    build: ./database
+    container_name: mssql
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  web-app:
+    build: ./Shortner.Web
+    container_name: web-api
+    depends_on:
+      - mssql
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mssql_data:
+    driver: local

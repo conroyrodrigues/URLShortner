@@ -1,0 +1,68 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card">
+          <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+          <div class="card-content">
+            <span class="card-title">Enter URL</span>
+            <div>
+              <input id="originalUrl" type="text" formControlName="originalUrl" placeholder="https://example.com">
+              <div *ngIf="urlForm.controls['originalUrl'].invalid && urlForm.controls['originalUrl'].touched">
+                <small *ngIf="urlForm.controls['originalUrl']">URL is required.</small>
+                <small *ngIf="urlForm.controls['originalUrl']">Please enter a valid URL.</small>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <button class="waves-effect waves-light btn-small" id="btnShorten" type="submit" [disabled]="urlForm.invalid">Shorten URL</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div *ngIf="shortenedUrls.length === 0 && !errorMessage">
+      No shortened URLs found.
+    </div>
+    
+    <div *ngIf="errorMessage" class="error red-text">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+  <div id="resultcontainer" class="container">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card">
+          <div class="card-content">
+            <h4>Existing Urls</h4>
+            <table *ngIf="shortenedUrls.length > 0" border="1">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Original URL</th>
+                  <th>Short URL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let url of shortenedUrls">
+                  <td>{{ url.urlShortenerId }}</td>
+                  <td>{{ url.originalUrl }}</td>
+                  <td><a href="{{ url.originalUrl }}">{{ url.shortUrl }}</a> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
