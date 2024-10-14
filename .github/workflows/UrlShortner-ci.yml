@@ -33,4 +33,4 @@ jobs:
 
       # Run tests (if any tests are available in your solution)
       - name: Run tests
-        run: dotnet test ".\Tests\Shortner.Tests\"
+        run: dotnet test
