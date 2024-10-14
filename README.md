@@ -45,10 +45,10 @@ The following diagram tries to explain the working of the underlying code.
  [Class Diagram](/img/ClassDiagram.png)
 
  2. ER Diagram
- `![ER Diagram](/img/ERDiagram.png)`
+ [ER Diagram](/img/ERDiagram.png)
 
  3. Sequence Diagram
- `![ER Diagram](/img/Sequence_Diagaram.png)`
+ [ER Diagram](/img/Sequence_Diagaram.png)
   
 
 ## Features
@@ -82,7 +82,7 @@ cd URLShortner
 
 The structure of the application is as follows
 
-`![Project Structure](/img/ProjectStructure.png)`
+[Project Structure](/img/ProjectStructure.png)
  
  - Database: Contains the docker setup file for required for setting the database with sample data
  - img: Files used in the documentation process
@@ -99,7 +99,7 @@ The structure of the application is as follows
 3. navigate to [http://localhost:8080/] (http://localhost:8080/) on the browser
 
 You should see the following,
-`![RunningApp](/img/RunningApp.png)`
+[Running Application](/img/RunningApp.png)
 
 An end to end Test should look so,
-`![e2e](/img/e2eTests.png)`
+[e2e Test](/img/e2eTests.png)
