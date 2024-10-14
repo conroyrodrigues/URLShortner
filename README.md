@@ -89,7 +89,7 @@ The structure of the application is as follows
  - Shortner.Web: The Web Application in C#
     - view: The angular View Setup
 - Tests/Shortner.Tests: Unit Test for testing the backend Services, this project runs on xUnit, Moq and EF. For the purpose of testing an InMemory database is used.
-- worflows: Contains CI required to build and run the tests.
+- .github/worflows: Contains CI required to build and run the tests.
 - docker-compose: contains the entire setup required to run the application
 
 ### How to Run the Application
