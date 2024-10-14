@@ -1,4 +1,4 @@
-name: James-Cli - Build and Test
+name: Build and Test
 
 # Controls when the workflow will run
 on:
