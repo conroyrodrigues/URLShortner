@@ -101,5 +101,5 @@ The structure of the application is as follows
 You should see the following,
 [Running Application](/img/RunningApp.png)
 
-An end to end Test should look so,
+An end to end Test should look so
 [e2e Test](/img/e2eTests.png)
