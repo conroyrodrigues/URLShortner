@@ -84,7 +84,7 @@ The structure of the application is as follows
 
 [Project Structure](/img/ProjectStructure.png)
  
- - Database: Contains the docker setup file for required for setting the database with sample data
+ - Database: Contains the docker setup file required for setting the database with and seeding sample data
  - img: Files used in the documentation process
  - Shortner.Web: The Web Application in C#
     - view: The angular View Setup
@@ -95,8 +95,9 @@ The structure of the application is as follows
 ### How to Run the Application
 
 1. git clone https://github.com/conroyrodrigues/URLShortner.git
-2. docker-compose up -d
-3. navigate to [http://localhost:8080/] (http://localhost:8080/) on the browser
+2. cd URLShortner
+3. docker-compose up -d
+4. navigate to [http://localhost:8080/] (http://localhost:8080/) on the browser
 
 You should see the following,
 [Running Application](/img/RunningApp.png)
